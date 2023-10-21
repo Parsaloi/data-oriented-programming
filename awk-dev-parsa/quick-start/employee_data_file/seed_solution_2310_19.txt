@@ -1,0 +1,7 @@
+[SOLUTION : 2310.19]
+
+[TOOL CLAIM] -> Useful Awk programs are often short, just a line or two.
+
+[VERYFYING TOOL CLAIM]
+
+For the seed solution, I would want to print the name and pay (rate times hours) for everyone who worked more than zero hours.
