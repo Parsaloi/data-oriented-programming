@@ -1,0 +1,32 @@
+== .
+
+2023-10-17
+
+== Demystifying IO exceptions and denugging IO errors (gracefully at least)
+
+```bash
+range = RangeRecord[begin=10, end=0]
+Exception in thread "main" java.nio.file.NoSuchFileException: files/range-10-0.dat
+        at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+        at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+        at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:484)
+        at java.base/java.nio.file.Files.newOutputStream(Files.java:228)
+        at io.parsaizme.playing_with_records.C_PlayWithRecord.main(C_PlayWithRecord.java:99)
+```
+
+
+.NoSuchFileException
+```bash
+Exception in thread "main" java.nio.file.NoSuchFileException: files/range-10-0.dat
+        at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+        at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+        at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+        at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+        at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+        at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+        at io.parsaizme.playing_with_records.C_PlayWithRecord.main(C_PlayWithRecord.java:106)
+```

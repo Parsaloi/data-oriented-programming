@@ -1,0 +1,13 @@
+== .
+
+> 2023-10-17
+
+== Principles of Data-oriented programming
+
+1. **Separate code from data**
+
+2. **Represent data with generic data structures**
+
+3. **Data is immutable**
+
+4. **Separate data schema from data representation**

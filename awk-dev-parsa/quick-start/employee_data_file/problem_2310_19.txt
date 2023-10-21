@@ -1,0 +1,9 @@
+[PROBLEM : 2310-19]
+
+Suppose I have a file calles "emp.data" that contains three fields of information about my employees: 
+* name, 
+* pay rate in dollars and,
+* number of hours worked
+
+Given that the contents of the "employee.data" are structured such that each employee is represented by a record per line with the fields separated by spaces or tabswq
+
